@@ -1,5 +1,5 @@
 import Image from "next/image";
-import starts from '@/public/images/starts.png'
+import starts from '../../../../public/images/starts.png'
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 

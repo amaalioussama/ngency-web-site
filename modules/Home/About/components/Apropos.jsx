@@ -1,7 +1,7 @@
 import Image from "next/image";
-import about from '@/public/images/about.png';
-import img from '@/public/images/img.png';
-import ourteam from '@/public/images/ourteam.png'
+import about from '../../../../public/images/about.png';
+import img from '../../../../public/images/img.png';
+import ourteam from '../../../../public/images/ourteam.png'
 export default function Apropos() {
 
   const wordsligne1 = [

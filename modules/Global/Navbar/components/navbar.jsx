@@ -1,8 +1,8 @@
 import Image from "next/image";
-import logo from '@/public/images/logo.png';
+import logo from '../../../../public/images/logo.png';
 import Link from 'next/link'
-import negency from "@/public/images/negency.svg"
-import mode from '@/public/images/mode.png'
+import negency from "../../../../public/images/negency.svg"
+import mode from '../../../../public/images/mode.png'
 export default function NavSection() {
   return <div className="flex  border-4  border-t-0 border-l-0 border-r-0">
 
