@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+ 
+  font-family: 'zeyda';
+  src: url('../public/fonts/Zeyada.ttf');
+  font-family: 'zindsong';
+  src: url('../public/fonts/WindSong.ttf');
+
+
+  
+}
+:root {
+}
+

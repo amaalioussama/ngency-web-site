@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.circle {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: 60px; 
+  height: 60px; 
+  background-color: white; 
+  border: 3px solid #D9D9D9; 
+  border-radius: 50%;
+}
+.circle2 {
+  position: absolute;
+  top: -25px; 
+  left: 30px; 
+  width: 60px; 
+  height: 60px; 
+  background-color: black; 
+  border: 3px solid black; 
+  border-radius: 50%;
+ 
+}
+
+
+.section:hover {
+  background-color: #5582C2;
+  color: #fff;
+  
+}
