@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 import img from '../../../../public/images/img.png';
-import fb from '../../../../public/imagesfb.png'
-import insta from '../../../../public/images/insta.png'
-import twiter from '../../../../public/images/twiter.png'
+import fb from '../../../../public/images/Fb.png'
+import insta from '../../../../public/images/Insta.png'
+import twiter from '../../../../public/images/Twiter.png'
 import Pintrest from '../../../../public/images/Pintrest.png'
 import vertor from '../../../../public/images/Vector.png'
 export default function Herocomponent() {
