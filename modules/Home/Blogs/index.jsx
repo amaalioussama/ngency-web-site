@@ -1,3 +1,7 @@
+import BlogComponent from "./components/Blogs";
+
 export default function Blogs() {
-  return <div>Blogs section here...</div>;
+  return <div>
+    <BlogComponent/>
+  </div>;
 }

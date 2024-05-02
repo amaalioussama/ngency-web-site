@@ -10,19 +10,28 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        'left-lg': '10px 0 15px -3px rgba(0, 0, 0, 0.1), 4px 0 6px -2px rgba(0, 0, 0, 0.05)', // Define a large shadow on the left side
+        'left-lg': '10px 0 15px -3px rgba(0, 0, 0, 0.1), 4px 0 6px -2px rgba(0, 0, 0, 0.05)', 
         
       },
       colors :{
         mediumBlue: "#5582C2",
         mediumpink : "#BB549B" ,
         meduimwhite : "#FAFAFA",
-        costumgray : "#2A2A2A",
-        darkpink : "#BB549B"
+        grayup : "#2A2A2A",
+     
+        darkpink : "#BB549B",
+        lightgray : "#F6F6F6",
+        darkgrey : "#1E1E1E",
          },
       fontFamily: {
  zeyda :['zeyda'],
- zindsong:['zindsong']
+ zindsong:['zindsong'],
+ outfitblack:['outfitblack'],
+ outfitthin :['outfitthin'],
+ outfitregular : ['outfitregular'],
+ extralight:['extralight'],
+ allison:['allison']
+ 
 
    
    
@@ -40,6 +49,9 @@ module.exports = {
         extrabold: '999',
         black: '900',
       },
+      backgroundImage: theme => ({
+        'portfolio': "url('/images/background.png')",
+      }),
     },
   },
   plugins: [],

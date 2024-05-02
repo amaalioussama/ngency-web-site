@@ -3,15 +3,74 @@
 @tailwind utilities;
 
 @font-face {
- 
   font-family: 'zeyda';
   src: url('../public/fonts/Zeyada.ttf');
+}
+
+@font-face {
   font-family: 'zindsong';
   src: url('../public/fonts/WindSong.ttf');
+}
 
+@font-face {
+  font-family: 'outfitblack';
+  src: url('../public/fonts/Outfit/static/Outfit-Black.ttf');
+}
 
-  
+@font-face {
+  font-family: 'outfitthin';
+  src: url('../public/fonts/Outfit/static/Outfit-Thin.ttf');
+}
+@font-face {
+  font-family: 'outfitregular';
+  src: url('../public/fonts/Outfit/static/Outfit-Regular.ttf');
+}
+@font-face {
+  font-family: 'extralight';
+  src: url('../public/fonts/Outfit/static/Outfit-ExtraLight.ttf');
+}
+@font-face {
+  font-family: 'allison';
+  src: url('../public/fonts/Allison.ttf');
 }
 :root {
+  .swiper-pagination {
+   
+  
+    position: absolute; 
+    display: flex; 
+    justify-content: center; 
+    
+}
+
+.swiper-pagination {
+  position: absolute;
+  margin-top: -122rem; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+}
+
+  .swiper-pagination-bullet {
+ 
+
+    background-color: #FAFAFA;
+    margin-top: -6rem; 
+ 
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%; 
+    border: 1px solid black; 
+    margin-right: 0.5rem;
+}
+.swiper-pagination-bullet-active {
+
+  background-color: #FAFAFA;
+  display: inline-block;
+  width: 2rem;
+  border-radius: 50%; 
+  border: 1px solid #BB549B;  
+  height: 2rem;
+  margin-right: 0.5rem;
+}
 }
 

@@ -1,11 +1,22 @@
+'use client'
+import { motion } from "framer-motion"
+import React from 'react';
 const Whyus = () => {
     return (
-        <div className="relative bg-costumgray mt-5 h-[580px]">
+        <motion.div
+        initial={{ opacity: 0 , y : -300}}
+        animate={{ opacity: 1 , y : 40 }}
+        transition={{duration: 1 }}
+        whileInView={{ y: -40, opacity: 1 }} className="relative bg-grayup mt-5 h-[580px]">
             <div className="">
             <h1 className=" absolute ml-96 mt-9 flex justify-center items-center text-white text-4xl uppercase font-bold"> Pourquoi notre agence ?</h1>
           
             </div>
-            <div className="absolute flex  mt-32 ml-11">
+            <motion.div
+        initial={{ opacity: 0 , y : 10}}
+        animate={{ opacity: 1 , y : 40 }}
+        transition={{duration: 1 }}
+        whileInView={{ y: -40, opacity: 1 }} className="absolute flex  mt-52 ml-11">
                 <div className="absolute  ">
                     <div className="relative ml-9  bg-darkpink h-[150px] w-[358px]">
 
@@ -41,8 +52,12 @@ const Whyus = () => {
                         années d'expérience <br /> dans l'industrie.
                     </span>
                 </div>
-            </div>
-            <div className="absolute flex  mt-80 ml-11">
+            </motion.div>
+          <motion.div
+        initial={{ opacity: 0 , y : -300}}
+        animate={{ opacity: 1 , y : 40 }}
+        transition={{duration: 1 }}
+        whileInView={{ y: -40, opacity: 1 }}className="absolute flex  mt-96 ml-11">
                 <div className=" absolute border-4 bg-white flex h-36 w-[350px] ml-10 ">
                     <div className="flex">  <span className=" ml-3 mt-3 text-black font-bold uppercase ">Nous avons aidé nos clients à
                         atteindre une augmentation
@@ -65,9 +80,9 @@ const Whyus = () => {
                   
                 </div>
                 <div className=" absolute border-4 bg-white flex h-36 w-[350px] ml-[860px] ">
-                    <div className="flex">  <span className="  mt-1 ml-2  text-black text-5xl font-bold uppercase">
+                    <div className="flex">  <span className=" absolute mt-4 ml-5  text-black text-5xl font-bold uppercase">
                         X                    </span>
-                    <span className=" ml-3 mt-9 text-black font-bold uppercase ">
+                    <span className=" absolute ml-12 mt-9 text-black font-bold uppercase ">
                         
                        &nbsp;&nbsp;&nbsp;&nbsp;
                        &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;récompenses et <br/>
@@ -80,8 +95,8 @@ const Whyus = () => {
                     </div>
                   
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 };
 

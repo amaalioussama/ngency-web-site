@@ -1,3 +1,5 @@
+import FooterSection from "./components/footer";
+
 export default function Footer() {
-  return <div>footer here...</div>;
+  return <div><FooterSection/></div>;
 }
