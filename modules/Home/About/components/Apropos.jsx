@@ -181,7 +181,7 @@ export default function Apropos() {
 </div>
 </div>
 {/* center section */}
-<div className=" flex-grow -mr-[5px]   ">
+<div className=" flex-grow mr-[1px]   ">
 
 {/* first section */}
 <motion.div
@@ -286,7 +286,7 @@ and equal blame belongs to those <br/> who fail in their duty through weakness o
 <div className="flex  mt-3 ml-8 ">
 
 <div className=" mt-5   border-2 h-44 w-44   ">
-<Image src={img} className=" ml-2 -mt-2 h-44 w-44  -mb-2    " alt="logo"/>
+<Image src={img} className=" ml-2 -mt-2 h-44 w-44  -mb-2 " alt="logo"/>
 </div>
 
 <div className=" mt-3 bg-meduimwhite  ">
@@ -376,7 +376,7 @@ className="mt-20 "><div className="mt-8  border-4 border-l-0 border-b-0 border-r
    
 
     </div>
-    <div className="flex mt-6">
+    <div className="flex mt-6 ml-[6px] ">
     <div className="border-2 border-l-1 border-b-0 h-28 w-[390px] " onClick={handleClick1}>
               <h1 className="text-center mt-9 uppercase duration-100" style={h1Style}>
                 {h1Content}
@@ -395,7 +395,7 @@ className="mt-20 "><div className="mt-8  border-4 border-l-0 border-b-0 border-r
           </div>
 
 
-          <div className="flex ">
+          <div className="flex  ml-[6px] ">
             <div className="border-4 border-l-1 h-28   w-[390px] bg-mediumBlue" onClick={handleClick4}>
               <h1 className="text-center mt-9 uppercase duration-100" style={h4Style}>
                 {h4Content}
