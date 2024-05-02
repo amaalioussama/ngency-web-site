@@ -36,16 +36,16 @@ export default function FooterSection() {
           </div>
           <div className="flex items-center gap-4 pr-3">
             <a href="https://facebook.com/">
-              <img className="w-6" src="/images/fb.png" alt="facebook" />
+              <img className="w-6" src="/images/Fb.png" alt="facebook" />
             </a>
             <a href="https://www.instagram.com/">
-              <img className="w-6" src="/images/insta.png" alt="instagram" />
+              <img className="w-6" src="/images/Insta.png" alt="instagram" />
             </a>
             <a href="https://twitter.com/">
-              <img className="w-6" src="/images/twiter.png" alt="twiter" />
+              <img className="w-6" src="/images/Twiter.png" alt="twiter" />
             </a>
             <a href="https://www.pinterest.com/">
-              <img className="w-6" src="/images/pintrest.png" alt="pintrest" />
+              <img className="w-6" src="/images/Pintrest.png" alt="pintrest" />
             </a>
           </div>
         </div>
