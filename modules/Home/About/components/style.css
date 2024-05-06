@@ -1,0 +1,25 @@
+@media screen and (min-width: 1392px) {
+  #ll2{
+   
+    width:25rem;
+   
+  }
+  #txtx2{
+    margin-left: 1rem;
+  }
+  
+  #c{
+    width: 1110px;
+    margin-right: 1rem;
+  }
+  #ez{
+   width: 650px;
+  }
+    #ez2{
+        width: 650px;
+        margin-right: 4rem;
+    }
+  #is{
+    width: 1126px;
+  }
+   }

@@ -10,17 +10,20 @@ import vertor from '@/public/images/Vector.png'
 import '../../../../styles/globals.css';
 import { motion } from "framer-motion"
 import React from 'react';
+import style from'./style.css'
 
 const Avis = () => {
   return (
     <motion.div
-    initial={{ opacity: 0 , y : -300}}
+    initial={{ opacity: 0 , y : -100}}
     animate={{ opacity: 1 , y : 40 }}
     transition={{duration: 1 }}
-    whileInView={{ y: -20, opacity: 1 }}  className="flex border-4 border-t-0 border-l-0 border-r-0 bg-grayup h-screen overflow-hidden">
-      {/* Left section */}
-      <div className="border-4 border-l-4 border-t-0 border-b-0 -mr-1 w-[87px]">
-        <div className="absolute mt-[200px] ml-5 w-13">
+    whileInView={{ y: -20, opacity: 1 }} 
+    id="aaalll"
+    className="flex border-4 border-l-0 border-r-0 bg-grayup h-screen overflow-hidden">
+  
+      <div      id="tt2"  className="border-4 border-l-4 border-t-0 border-b-0 -mr-1 w-[87px]">
+        <div id="hqd" className="absolute mt-[200px] ml-5 w-13">
           <h1
             className="text-white text-3xl font-outfitblack "
             style={{ writingMode: 'vertical-lr', textOrientation: 'mixed', transform: 'rotate(180deg)' }}
@@ -134,7 +137,7 @@ const Avis = () => {
 
 
       {/* Right section */}
-      <div className="border-4 border-r-0 border-b-0 border-t-0 w-[85px]">
+      <div id='resqs' className="border-4 border-r-0 border-b-0 border-t-0 w-[85px]">
       
       </div>
     </motion.div>

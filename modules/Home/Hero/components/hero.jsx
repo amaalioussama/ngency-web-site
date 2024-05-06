@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-
+import home from '@/public/images/home.png';
 import img from '@/public/images/img.png';
 import fb from '@/public/images/Fb.png'
 import insta from '@/public/images/Insta.png'
@@ -9,6 +9,7 @@ import Pintrest from '@/public/images/Pintrest.png'
 import vertor from '@/public/images/Vector.png'
 import { motion } from "framer-motion"
 import React from 'react';
+import style from'./style.css'
 export default function Herocomponent() {
 
   const wordsligne1 = [
@@ -30,9 +31,9 @@ export default function Herocomponent() {
 
   return <div className="flex   border-4  border-t-0 border-l-0 border-r-0 bg-meduimwhite"  style={{height : "568px"}}>
 
-<div className="border-4 border-l-4 border-t-0 border-b-0 w-[96px] ">
+<div id="ll" className="border-4 border-l-4 border-t-0 border-b-0 w-[96px] ">
       <div className="relative">
-        <div className="absolute ml-6 mt-56 w-7">
+        <div id="txtx" className="absolute ml-6 mt-56 w-7">
         <h1
   className="text-black text-3xl font-outfitblack   "
   style={{ writingMode: 'vertical-lr', textOrientation: 'mixed', transform: 'rotate(180deg)', }}
@@ -43,7 +44,7 @@ Home
 </div>
 </div>
 {/* center section */}
-<div className="flex flex-grow  ml-11">
+<div id="cc" className="flex flex-grow  ml-11">
 <div className="mt-20 ">
 <div className="whitespace-nowrap">
       
@@ -120,23 +121,27 @@ Home
 </div>
 {/* right section */}
 
-<div className="border-4 border-r-0 border-b-0 ml-[86px] w-[86px] -mt-20">
-    <a href="https://www.facebook.com" className="block">
-        <Image src={fb} className="absolute ml-6 mt-56 w-7" alt="logo"/>
-    </a>
+    <div id="rr" className="border-4 border-r-0 border-b-0 mr-[86px] -mt-20">
+        <div id="logos"className="  flex flex-col items-start">
+
+        <a id="rre"href="https://www.facebook.com" className="block -mt-1">
+            <Image src={fb} className="absolute ml-6 mt-56 w-7" alt="logo"/>
+        </a>
+        
+        <a id="rre"href="https://www.instagram.com" className="block mt-[75px]">
+            <Image src={insta} className="absolute ml-6 mt-56 w-7" alt="logo"/>
+        </a>
     
-    <a href="https://www.instagram.com" className="block mt-20">
-        <Image src={insta} className="absolute ml-6 mt-56 w-7" alt="logo"/>
-    </a>
-   
-    <a href="https://www.twitter.com" className="block mt-40">
-        <Image src={twiter} className="absolute ml-6 mt-56 w-7"alt="logo" />
-    </a>
-   
-    <a href="https://www.pinterest.com" className="block mt-60">
-        <Image src={Pintrest} className="absolute ml-6 mt-56 w-7" alt="logo" />
-    </a>
-</div>
+        <a id="rre"href="https://www.twitter.com" className="block mt-[80px]">
+            <Image src={twiter} className="absolute ml-6 mt-56 w-7"alt="logo" />
+        </a>
+    
+        <a id="rre"href="https://www.pinterest.com" className="block mt-[80px]">
+            <Image src={Pintrest} className="absolute ml-6 mt-56 w-7" alt="logo" />
+        </a>
+        </div>
+    
+    </div>
 
 
   </div>;

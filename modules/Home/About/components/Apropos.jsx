@@ -10,15 +10,27 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { motion } from "framer-motion"
+import style from'./style.css'
 
 export default function Apropos() {
-  const [h1Content, setH1Content] = useState('Innovation');
-  const [h2Content, setH2Content] = useState('Collaboration');
-  const [h3Content, setH3Content] = useState('Qualité');
-  const [h4Content, setH4Content] = useState('Satisfaction client');
-  const [h5Content, setH5Content] = useState('Intégrité');
-  const [h6Content, setH6Content] = useState('Respect');
+  const initialValues = {
+    h1: 'Innovation',
+    h2: 'Collaboration',
+    h3: 'Qualité',
+    h4: 'Satisfaction client',
+    h5: 'Intégrité',
+    h6: 'Respect',
+  };
 
+  const [h1Content, setH1Content] = useState(initialValues.h1);
+  const [h2Content, setH2Content] = useState(initialValues.h2);
+  const [h3Content, setH3Content] = useState(initialValues.h3);
+  const [h4Content, setH4Content] = useState(initialValues.h4);
+  const [h5Content, setH5Content] = useState(initialValues.h5);
+  const [h6Content, setH6Content] = useState(initialValues.h6);
+  const [active ,setActive]= useState(false);
+
+  
   const [h1Style, setH1Style] = useState({
     fontSize: '1.5rem',
     color: 'black',
@@ -166,12 +178,88 @@ export default function Apropos() {
     "approche innovante."  
   ]
 
+  const handleMouseEnter = (functionNumber) => {
+    setActive(functionNumber);
+    switch (functionNumber) {
+      case 1:
+        handleClick1();
+        break;
+      case 2:
+        handleClick2();
+        break;
+      case 3:
+        handleClick3();
+        break;
+      case 4:
+        handleClick4();
+        break;
+      case 5:
+        handleClick5();
+        break;
+      case 6:
+        handleClick6();
+        break;
+      default:
+        console.log("Aucune fonction valide trouvée");
+        break;
+    }
+  };
+  const initialStyles = {
+    h1: {
+      fontSize: '1.5rem',
+      color: 'black',
+      fontWeight: 'bold',
+    },
+    h2: {
+      fontSize: '1.5rem',
+      color: 'white',
+      fontWeight: 'bold',
+    },
+    h3: {
+      fontSize: '1.5rem',
+      color: 'black',
+      fontWeight: 'bold',
+    },
+    h4: {
+      fontSize: '1.5rem',
+      color: 'white',
+      fontWeight: 'bold',
+    },
+    h5: {
+      fontSize: '1.5rem',
+      color: 'black',
+      fontWeight: 'bold',
+    },
+    h6: {
+      fontSize: '1.5rem',
+      color: 'white',
+      fontWeight: 'bold',
+    },
+  };
+
+  const handleMouseLeave = () => {
+    setH1Content(initialValues.h1);
+    setH2Content(initialValues.h2);
+    setH3Content(initialValues.h3);
+    setH4Content(initialValues.h4);
+    setH5Content(initialValues.h5);
+    setH6Content(initialValues.h6);
+    setH1Style(initialStyles.h1);
+    setH2Style(initialStyles.h2);
+    setH3Style(initialStyles.h3);
+    setH4Style(initialStyles.h4);
+    setH5Style(initialStyles.h5);
+    setH6Style(initialStyles.h6);
+  };
+
+  
+
   return <div className="flex   border-4  border-t-0 border-l-0 border-r-0  " >
 
-<div className="border-4 border-l-4 border-t-0 border-b-0 -mr-1  ">
-      <div className="w-[87px]">
+<div id="ll2"  className="border-4 border-l-4 border-t-0 border-b-0 -mr-1  ">
+      <div  className="w-[87px]">
         <div className="absolute ml-6 mt-[400px] w-10">
-        <h1
+        <h1 id="txtx2"
   className="text-black text-3xl font-outfitblack   "
   style={{ writingMode: 'vertical-lr', textOrientation: 'mixed', transform: 'rotate(180deg)', }}
 >
@@ -181,7 +269,7 @@ export default function Apropos() {
 </div>
 </div>
 {/* center section */}
-<div className=" flex-grow mr-[1px]   ">
+<div id="c" className=" flex-grow -mr-[5px]   ">
 
 {/* first section */}
 <motion.div
@@ -222,7 +310,7 @@ className="mt-20 ml-14">
   </div>
   </motion.div>
 
-  <div className="mt-12   border-4 border-l-0 border-b-0 border-r-0">
+  <div   className="mt-12   border-4 border-l-0 border-b-0 border-r-0">
     <div className="flex justify-center items-center mt-5 mr-10">
 
     <h1 className="text-black text-4xl font-bold  uppercase ml-8">Notre équipe</h1>
@@ -233,11 +321,7 @@ className="mt-20 ml-14">
   
 </div>
 
-<motion.div
-initial={{ opacity: 0 , y : -300}}
-animate={{ opacity: 1 , y : 40 }}
-transition={{duration: 1 }}
-whileInView={{ y: -40, opacity: 1 }}
+<div
 className="mt-20 ">
   
    <div>
@@ -254,14 +338,14 @@ slidesPerView={1}
 loop={true}
 onSlideChange={() => console.log('slide change')}
 onSwiper={(swiper) => console.log(swiper)}
-className="w-[1188px] -mr-4 "
+className="w-[1188px] -mr-3 "
 
 >
 
 <SwiperSlide >
 <div className="flex justify-center items-center mt-9  ">
 
-<div className=" bg-meduimwhite border h-[400px] w-[800px] ml-1  ">
+<div id="ez" className=" bg-meduimwhite border h-[400px] w-[800px] ml-1  ">
 <div className="flex  mt-3 ml-8 ">
 
 <div className=" mt-5   border-2 h-44 w-44   ">
@@ -282,11 +366,11 @@ and equal blame belongs to those <br/> who fail in their duty through weakness o
 </div>
 
 </div>
-<div className="bg-meduimwhite border h-[400px] w-[850px] mr-4  ">
+<div id="ez2" className="bg-meduimwhite border h-[400px] w-[850px] mr-4  ">
 <div className="flex  mt-3 ml-8 ">
 
 <div className=" mt-5   border-2 h-44 w-44   ">
-<Image src={img} className=" ml-2 -mt-2 h-44 w-44  -mb-2 " alt="logo"/>
+<Image src={img} className=" ml-2 -mt-2 h-44 w-44  -mb-2    " alt="logo"/>
 </div>
 
 <div className=" mt-3 bg-meduimwhite  ">
@@ -359,7 +443,7 @@ and equal blame belongs to those <br/> who fail in their duty through weakness o
 </div>
 </SwiperSlide>
 
-</Swiper></div></motion.div>
+</Swiper></div></div>
 
 
 
@@ -368,7 +452,7 @@ initial={{ opacity: 0 , y : -300}}
 animate={{ opacity: 1 , y : 40 }}
 transition={{duration: 1 }}
 whileInView={{ y: -40, opacity: 1 }}
-className="mt-20 "><div className="mt-8  border-4 border-l-0 border-b-0 border-r-0">
+className="mt-20 "><div  id="is" className="mt-8  border-4 border-l-0 border-b-0 border-r-0">
 
     <div className="flex justify-center items-center mt-5 ">
     
@@ -376,38 +460,49 @@ className="mt-20 "><div className="mt-8  border-4 border-l-0 border-b-0 border-r
    
 
     </div>
-    <div className="flex mt-6  ">
-    <div className="border-2 border-l-1 border-b-0 h-28 w-[390px] " onClick={handleClick1}>
-              <h1 className="text-center mt-9 uppercase duration-100" style={h1Style}>
+    <div className="flex mt-6">
+    <div className="border-2 border-l-1 border-b-0 h-28 w-[390px] "
+     onMouseOver={() => handleMouseEnter(1)} 
+     onMouseLeave={handleMouseLeave}>
+              <h1 className="text-center mt-9 uppercase duration-600" style={h1Style}>
                 {h1Content}
               </h1>
             </div>
-            <div className="border-2 border-l-0 border-b-0 h-28 w-[390px] bg-mediumBlue" onClick={handleClick2}>
-              <h1 className="text-center mt-9 uppercase duration-100" style={h2Style}>
+            <div className="border-2 border-l-0 border-b-0 h-28 w-[390px] bg-mediumBlue" 
+            
+            onMouseOver={() => handleMouseEnter(2)} 
+            onMouseLeave={handleMouseLeave}>
+              <h1 className="text-center mt-9 uppercase duration-600" style={h2Style}>
                 {h2Content}
               </h1>
             </div>
-            <div className="border-2 border-l-0 border-b-0 border-r-1 h-28 w-[386px]" onClick={handleClick3}>
-              <h1 className="text-center mt-9 uppercase duration-100" style={h3Style}>
+            <div className="border-2 border-l-0 border-b-0 border-r-1 h-28 w-[386px]"
+              onMouseOver={() => handleMouseEnter(3)} 
+              onMouseLeave={handleMouseLeave}>
+              <h1 className="text-center mt-9 uppercase duration-600" style={h3Style}>
                 {h3Content}
               </h1>
             </div>
           </div>
 
 
-              <div className="flex   ">
-            <div className="border-4 border-l-1 h-28   w-[390px] bg-mediumBlue" onClick={handleClick4}>
-              <h1 className="text-center mt-9 uppercase duration-100" style={h4Style}>
+          <div className="flex ">
+            <div className="border-4 border-l-1 h-28   w-[390px] bg-mediumBlue"
+              onMouseOver={() => handleMouseEnter(4)} 
+              onMouseLeave={handleMouseLeave}>
+              <h1 className="text-center mt-9 uppercase duration-600" style={h4Style}>
                 {h4Content}
               </h1>
             </div>
-            <div className="border-4 border-l-0 h-28 w-[390px]" onClick={handleClick5}>
-              <h1 className="text-center mt-9 uppercase duration-100" style={h5Style}>
+            <div className="border-4 border-l-0 h-28 w-[390px]"  onMouseOver={() => handleMouseEnter(5)} 
+     onMouseLeave={handleMouseLeave}>
+              <h1 className="text-center mt-9 uppercase duration-600" style={h5Style}>
                 {h5Content}
               </h1>
             </div>
-            <div className="border-4 border-l-0 border-r-1 h-28 w-[386px] bg-mediumBlue" onClick={handleClick6}>
-              <h1 className="text-center mt-9 uppercase duration-100" style={h6Style}>
+            <div className="border-4 border-l-0 border-r-1 h-28 w-[386px] bg-mediumBlue"   onMouseOver={() => handleMouseEnter(6)} 
+     onMouseLeave={handleMouseLeave}>
+              <h1 className="text-center mt-9 uppercase duration-600" style={h6Style}>
                 {h6Content}
               </h1>
             </div>
@@ -421,7 +516,7 @@ className="mt-20 "><div className="mt-8  border-4 border-l-0 border-b-0 border-r
 
 
 
-<div className="border-4 border-r-0 border-b-0 -mr-1  border-t-0  w-[390px]">
+<div id="rr2" className="border-4 border-r-0 border-b-0 -mr-1  border-t-0  w-[390px]">
  
 </div>
 
