@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import home from '@/public/images/home.png';
+
 import img from '@/public/images/img.png';
 import fb from '@/public/images/Fb.png'
 import insta from '@/public/images/Insta.png'
