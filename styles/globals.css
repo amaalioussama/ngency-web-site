@@ -72,5 +72,11 @@
   height: 2rem;
   margin-right: 0.5rem;
 }
+#stroook{
+ 
+  -webkit-text-fill-color: transparent;
+  
+  -webkit-text-stroke-width: 1px;
+}
 }
 

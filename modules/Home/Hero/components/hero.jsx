@@ -105,12 +105,18 @@ Home
  
  className=" relative ml-20 mt-9 border-2  border-mediumBlue h-11 w-52">
  
-<button className=" flex justify-center items-center ml-2 -mt-3    bg-mediumBlue w-60 h-11">
+ <motion.button
+        whileHover={{
+          scale: 1.1,
+          backgroundColor: "#0066ff"
+        }}
+        transition={{ duration: 0.5}}
+      className=" flex justify-center items-center ml-2 -mt-3    bg-mediumBlue w-60 h-11">
     <div className="flex"> 
     <h2 className="text-white font-outfitregular text-sm uppercase">Découvrez nos services </h2> 
     <Image src={vertor} alt="img" className=" ml-2 mt-1 h-4 w-4"/>
 </div> 
-</button>
+</motion.button>
 </motion.div>
  </div>
 

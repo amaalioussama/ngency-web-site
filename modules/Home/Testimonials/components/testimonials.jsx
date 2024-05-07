@@ -9,10 +9,35 @@ import 'swiper/css/scrollbar';
 import vertor from '@/public/images/Vector.png'
 import '../../../../styles/globals.css';
 import { motion } from "framer-motion"
-import React from 'react';
+import React  from 'react';
 import style from'./style.css'
+import { createClient } from "next-sanity";
+import { useState } from 'react';
+import { useEffect } from 'react';
+
+export const client = createClient({
+  projectId: 'pa5zw0oj',
+  dataset: 'production',
+  apiVersion: "v2022-03-07",
+  useCdn: true,       
+});
 
 const Avis = () => {
+  const [description, setDescription] = useState([]);
+
+useEffect(() => {
+  
+  const fetchData = async () => {
+    try {
+      const data = await client.fetch('*[_type == "temonologies"]');
+      setDescription(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  fetchData();
+}, []);
   return (
     <motion.div
     initial={{ opacity: 0 , y : -100}}
@@ -65,14 +90,20 @@ const Avis = () => {
 
      </div>
         </div>
-      <h1 className=" absolute text-center  ml-36 mt-10 text-black  text-xl font-bold  uppercase">Nom complete</h1>
-     
-      <h1 className=" absolute text-center  ml-36 mt-[77px]  text-black  text-xl font-outfitthin  uppercase">CEO XYZ</h1>
+        {description[0] && (
+    
+      <h1 className=" absolute text-center  ml-36 mt-10 text-black  text-xl font-bold  uppercase"> {description[0].name}</h1>
+    )}
+      {description[0] && (
+      
+      <h1 className=" absolute text-center  ml-36 mt-[77px]  text-black  text-xl font-outfitthin  uppercase">{description[0].job}</h1>
+    )}
+
       <h2 className=" absolute mt-24 ml-32 text-darkpink">__________________________________________________________________________</h2>
-      <Image src={starts} className="absolute mt-20 right-12 h-7 w-28"/>
-      <p className=" absolute mt-32 ml-[120px] text-xs font-outfitregular text-black uppercase">our power of choice is untrammelled and when nothing prevents our being able to <br/> do what we like best, every pleasure is to be welcomed and every pain avoided. But in <br/> 
-      certain circumstances and owing to the claims of duty or the obligations of business<br/>
-       it will frequently occur that pleasures have to be repudiated and annoyances <br/> accepted The wise man therefore always holds in these matters.</p>
+      <Image src={starts} className="absolute mt-20 right-12 h-7 w-28" alt='ll'/>
+      {description[0] && (
+      <p className=" absolute mt-32 ml-[120px] text-xs font-outfitregular text-black uppercase"> {description[0].description}</p>
+           )}
       </div>
        </div>
     </div>
@@ -83,11 +114,12 @@ const Avis = () => {
 
       </SwiperSlide>
       <SwiperSlide>
-      <div className=" flex-grow   ">
+               <div className=" flex-grow   ">
 
 <div className="  border-4 border-l-0 border-t-0 border-b-0 border-r-0">
        <div className="flex mt-44  justify-center items-center  ">
-      
+       
+        
     <div className="border-2  h-[250px] w-[700px]">
       <div className="relative bg-white -mt-3 ml-2 h-[250px] w-[700px]">
         <div className="absolute mt-8 ml-6">
@@ -97,28 +129,29 @@ const Avis = () => {
 
      </div>
         </div>
-      <h1 className=" absolute text-center  ml-36 mt-10 text-black  text-xl font-bold  uppercase">Nom complete</h1>
-     
-      <h1 className=" absolute text-center  ml-36 mt-[77px]  text-black  text-xl font-outfitthin  uppercase">CEO XYZ</h1>
-      <h2 className=" absolute mt-24 ml-32 text-darkpink">__________________________________________________________________________</h2>
-      <Image src={starts} className="absolute mt-20 right-12 h-7 w-28"/>
-      <p className=" absolute mt-32 ml-[120px] text-xs font-outfitregular text-black uppercase ">our power of choice is untrammelled and when nothing prevents our being able to <br/> do what we like best, every pleasure is to be welcomed and every pain avoided. But in <br/> 
-      certain circumstances and owing to the claims of duty or the obligations of business<br/>
-       it will frequently occur that pleasures have to be repudiated and annoyances <br/> accepted The wise man therefore always holds in these matters.</p>
-      </div>
+        {description[1] && (
+    
+      <h1 className=" absolute text-center  ml-36 mt-10 text-black  text-xl font-bold  uppercase"> {description[1].name}</h1>
+    )}
+      {description[1] && (
+      
+      <h1 className=" absolute text-center  ml-36 mt-[77px]  text-black  text-xl font-outfitthin  uppercase">{description[1].job}</h1>
+    )}
 
+      <h2 className=" absolute mt-24 ml-32 text-darkpink">__________________________________________________________________________</h2>
+      <Image src={starts} className="absolute mt-20 right-12 h-7 w-28" alt='ll'/>
+      {description[1] && (
+      <p className=" absolute mt-32 ml-[120px] text-xs font-outfitregular text-black uppercase"> {description[1].description}</p>
+           )}
+      </div>
        </div>
-     
     </div>
-   
-  
 
 </div>
 
 </div>
 
       </SwiperSlide>
-   
       
       </Swiper>
      
@@ -127,12 +160,17 @@ const Avis = () => {
         </div>
       <div className=" absolute  mt-[550px] ml-[569px] border-2  border-darkpink bg-white h-11 w-64">
      
- <button className=" flex justify-center items-center ml-1 -mt-2    bg-darkpink w-64 h-11">
+      <motion.button
+        whileHover={{
+          scale: 1.1,
+          backgroundColor: "#cc3399"
+        }}
+        transition={{ duration: 0.5}} className=" flex justify-center items-center ml-1 -mt-2    bg-darkpink w-64 h-11">
      <div className="flex"> 
      <h2 className="text-white font-outfitregular text-sm uppercase">Parlez nous de votre projet </h2> 
-     <Image src={vertor} alt="img" className=" ml-2 mt-1 h-4 w-4"/>
+     <Image src={vertor} alt="img" className=" ml-2 mt-1 h-4 w-4" />
  </div> 
- </button>
+ </motion.button>
  </div>
 
 

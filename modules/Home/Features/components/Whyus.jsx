@@ -23,7 +23,14 @@ const Whyus = () => {
         id="tt"
         className="absolute flex  mt-52 ml-11">
                 <div className="absolute  ">
-                    <div className="relative ml-9  bg-darkpink h-[150px] w-[358px]">
+                
+      
+                    <motion.div   whileHover={{
+          scale: 1.1
+          
+        }}
+        transition={{ duration: 0.5}}
+         className="relative ml-9  bg-darkpink h-[150px] w-[358px]">
 
                         <div className="absolute bg-mediumBlue  h-[150px] w-[355px]">
                             <div className=" absolute border-4 bg-darkpink flex h-36 w-[350px] ">
@@ -36,27 +43,35 @@ const Whyus = () => {
 
                         </div>
 
-                    </div>
+                    </motion.div>
 
                 </div>
 
-                <div className=" absolute border-4 bg-white flex h-36 w-[350px] ml-[450px]">
+                <motion.div   whileHover={{
+          scale: 1.1
+          
+        }}
+        transition={{ duration: 0.5}}className=" absolute border-4 bg-white flex h-36 w-[350px] ml-[450px]">
                     <h1 className="ml-2 text-black text-5xl font-bold uppercase flex items-center justify-center">
                         + X
                     </h1>
                     <span className="text-black text-xl font-bold uppercase ml-4 flex items-center justify-center">
                         années d'expérience <br /> dans l'industrie.
                     </span>
-                </div>
+                </motion.div>
 
-                <div className=" absolute border-4 bg-white flex h-36 w-[350px] ml-[860px] ">
+                <motion.div   whileHover={{
+          scale: 1.1
+          
+        }}
+        transition={{ duration: 0.5}} className=" absolute border-4 bg-white flex h-36 w-[350px] ml-[860px] ">
                     <h1 className="ml-2 text-black text-5xl font-bold uppercase flex items-center justify-center">
                         X %
                     </h1>
                     <span className="text-black text-xl font-bold uppercase ml-4 flex items-center justify-center">
                         années d'expérience <br /> dans l'industrie.
                     </span>
-                </div>
+                </motion.div>
             </motion.div>
           <motion.div
         initial={{ opacity: 0 , y : -300}}
@@ -65,7 +80,11 @@ const Whyus = () => {
         whileInView={{ y: -40, opacity: 1 }}
         id="tt"
         className="absolute flex  mt-96 ml-11">
-                <div className=" absolute border-4 bg-white flex h-36 w-[350px] ml-10 ">
+               <motion.div   whileHover={{
+          scale: 1.1
+          
+        }}
+        transition={{ duration: 0.5}}  className=" absolute border-4 bg-white flex h-36 w-[350px] ml-10 ">
                     <div className="flex">  <span className=" ml-3 mt-3 text-black font-bold uppercase ">Nous avons aidé nos clients à
                         atteindre une augmentation
                         moyenne dans leur
@@ -75,8 +94,12 @@ const Whyus = () => {
                     </span>
                     </div>
                   
-                </div>
-                <div className=" absolute border-4 bg-white flex h-36 w-[350px] ml-[450px] ">
+                </motion.div>
+                <motion.div   whileHover={{
+          scale: 1.1
+          
+        }}
+        transition={{ duration: 0.5}}  className=" absolute border-4 bg-white flex h-36 w-[350px] ml-[450px] ">
                     <div className="flex">  <span className=" ml-3 mt-3 text-black font-bold uppercase ">Nos campagnes de marketing numérique ont généré un
                      trafic accru
                      sur les sites web de nos clients de  <h1 className="  ml-52 -mt-6  text-black text-5xl font-bold uppercase">
@@ -85,8 +108,12 @@ const Whyus = () => {
                     </span>
                     </div>
                   
-                </div>
-                <div className=" absolute border-4 bg-white flex h-36 w-[350px] ml-[860px] ">
+                </motion.div>
+                <motion.div   whileHover={{
+          scale: 1.1
+          
+        }}
+        transition={{ duration: 0.5}} className=" absolute border-4 bg-white flex h-36 w-[350px] ml-[860px] ">
                     <div className="flex">  <span className=" absolute mt-4 ml-5  text-black text-5xl font-bold uppercase">
                         X                    </span>
                     <span className=" absolute ml-12 mt-9 text-black font-bold uppercase ">
@@ -101,7 +128,7 @@ const Whyus = () => {
                     </span>
                     </div>
                   
-                </div>
+                </motion.div>
             </motion.div>
         </motion.div>
     );

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import about from '@/public/images/about.png';
 import img from '@/public/images/img.png';
-import ourteam from '@/public/images/ourteam.png'
+import { useEffect } from "react";
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Scrollbar, A11y } from 'swiper/modules';
@@ -12,7 +12,31 @@ import 'swiper/css/scrollbar';
 import { motion } from "framer-motion"
 import style from'./style.css'
 
+import { createClient } from "next-sanity";
+
+export const client = createClient({
+  projectId: 'pa5zw0oj',
+  dataset: 'production',
+  apiVersion: "v2022-03-07",
+  useCdn: true,       
+});
+
 export default function Apropos() {
+const [description, setDescription] = useState([]);
+
+useEffect(() => {
+  
+  const fetchData = async () => {
+    try {
+      const data = await client.fetch('*[_type == "equipe"]');
+      setDescription(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  fetchData();
+}, []);
   const initialValues = {
     h1: 'Innovation',
     h2: 'Collaboration',
@@ -255,7 +279,7 @@ export default function Apropos() {
   
 
   return <div className="flex   border-4  border-t-0 border-l-0 border-r-0  " >
-
+ 
 <div id="ll2"  className="border-4 border-l-4 border-t-0 border-b-0 -mr-1  ">
       <div  className="w-[87px]">
         <div className="absolute ml-6 mt-[400px] w-10">
@@ -280,6 +304,9 @@ whileInView={{ y: -6, opacity: 1 }}
 className="mt-20 ml-14">
   <div  className=" whitespace-nowrap    " >
     <div className="flex">
+
+   
+
     {wordsligne1.map((word,index)=>(
 
 <p className=" text-black text-2xl font-outfitregular uppercase " key={index}>  &nbsp;{word}</p>
@@ -313,9 +340,9 @@ className="mt-20 ml-14">
   <div   className="mt-12   border-4 border-l-0 border-b-0 border-r-0">
     <div className="flex justify-center items-center mt-5 mr-10">
 
+    <h1 id="stroook" className="text-black text-4xl font-sans  uppercase ml-8">Notre équipe</h1>
     <h1 className="text-black text-4xl font-bold  uppercase ml-8">Notre équipe</h1>
-    <h1 className="text-black text-4xl font-bold  uppercase ml-8">Notre équipe</h1>
-    <h1 className="text-black text-4xl font-bold  uppercase ml-8">Notre équipe</h1>
+    <h1 id="stroook"className="text-black text-4xl font-sans  uppercase ml-8">Notre équipe</h1>
 
     </div>
   
@@ -343,104 +370,161 @@ className="w-[1188px] -mr-3 "
 >
 
 <SwiperSlide >
-<div className="flex justify-center items-center mt-9  ">
+<div className="container flex justify-center items-center mt-9">
+    <div id="ez" className="bg-mediumwhite border h-[400px] w-[600px] -ml-6">
+        <div className="flex mt-3 ml-8">
 
-<div id="ez" className=" bg-meduimwhite border h-[400px] w-[800px] ml-1  ">
-<div className="flex  mt-3 ml-8 ">
+            
+            <div className="mt-5 border-2 h-44 w-44 ml-5">
+                <Image src={img} className="ml-2 -mt-3 h-44 w-44" alt="logo" />
+            </div>
 
-<div className=" mt-5   border-2 h-44 w-44   ">
-<Image src={img} className=" ml-2 -mt-2 h-44 w-44  -mb-2    " alt="logo"/>
-</div>
+            
+            <div className="text-container ml-8 mt-14" style={{ width: 'calc(100% - 14rem)' }}>
+                {/* Nom */}
+                {description[0] && (
+                    <div >
+                        <h1 className="text-2xl font-bold uppercase" style={{ marginTop: '10rem' ,marginLeft : '-12rem' }}>
+                        {description[0].name}
+                        </h1>
+                        {/* Travail */}
+                        <h2 className="text-2xl font-mono uppercase" style={{ marginTop: '10px' ,marginLeft : '-12rem' }}>
+                        {description[0].job}
+                        </h2>
+                    </div>
+                )}
 
-<div className=" mt-3 bg-meduimwhite ">
-</div>
-<div className="-ml-44 mt-10"><h1 className="text-2xl  mt-40 font-bold  uppercase">Nom complete</h1>
-</div>
-<div className="-ml-44 mt-10">
-<h2 className="text-2xl  mt-48 -ml-6 font-mono  uppercase">metier</h2>
-</div>
+             
+                <h1 className="text-4xl ml-2 -mt-64 font-font-Allison font-extrabold">“</h1>
+                {description[0] && (
 
-<h1 className="text-4xl ml-28 mt-3 font-font-Allison  font-extrabold">“</h1>
-<p className="font-outfitregular  mt-12">ded by desire, that they cannot foresee <br/> the pain and trouble that are bound to <br/> ensue;
-and equal blame belongs to those <br/> who fail in their duty through weakness of<br/> will, which is</p>
-</div>
+<p className="font-outfitregular  " >
+{description[0].description}
+</p>
+    )
+  
+  }
+            </div>
+        </div>
+    </div>
 
-</div>
-<div id="ez2" className="bg-meduimwhite border h-[400px] w-[850px] mr-4  ">
-<div className="flex  mt-3 ml-8 ">
-
-<div className=" mt-5   border-2 h-44 w-44   ">
-<Image src={img} className=" ml-2 -mt-2 h-44 w-44  -mb-2    " alt="logo"/>
-</div>
-
-<div className=" mt-3 bg-meduimwhite  ">
-</div>
-<div className="-ml-44 mt-10"><h1 className="text-2xl  mt-40 font-bold  uppercase">Nom  complete</h1>
-</div>
-<div className="-ml-44 mt-10">
-<h2 className="text-2xl  mt-48 -ml-6 font-outfit  uppercase">metier</h2>
-</div>
-
-<h1 className="text-4xl ml-28 mt-3 font-outfit font-extrabold">“</h1>
-<p className="font-outfitregular mt-12">ded by desire, that they cannot foresee <br/> the pain and trouble that are bound to <br/> ensue;
-and equal blame belongs to those <br/> who fail in their duty through weakness of<br/> will, which is</p>
-</div>
-
-</div>
+    <div id="ez2" className="bg-mediumwhite border h-[400px] w-[600px] mr-4">
+    <div className="flex mt-3 ml-8">
 
 
+    <div className="mt-5 border-2 h-44 w-44 -ml-1">
+                <Image src={img} className="ml-2 -mt-3 h-44 w-44" alt="logo" />
+            </div>
 
+
+<div className="text-container ml-8 mt-14" style={{ width: 'calc(100% - 14rem)' }}>
+    {/* Nom */}
+    {description[1] && (
+        <div >
+            <h1 className="text-2xl font-bold uppercase" style={{ marginTop: '10rem' ,marginLeft : '-13rem' }}>
+            {description[1].name}
+            </h1>
+            {/* Travail */}
+            <h2 className="text-2xl font-mono uppercase" style={{ marginTop: '10px' ,marginLeft : '-13rem' }}>
+            {description[1].job}
+            </h2>
+        </div>
+    )}
+
+ 
+    <h1 className="text-4xl ml-2 -mt-64 font-font-Allison font-extrabold">“</h1>
+    {description[1] && (
+
+<p className="font-outfitregular  " >
+{description[1].description}
+</p>
+    )
+  
+  }
 </div>
+</div>
+    </div>
+</div>
+
 </SwiperSlide>
 <SwiperSlide >
-<div className="flex justify-center items-center mt-9  ">
+<div className="container flex justify-center items-center mt-9">
+    <div id="ez" className="bg-mediumwhite border h-[400px] w-[600px] ml-6">
+        <div className="flex mt-3 ml-8">
 
-<div className=" bg-meduimwhite border h-[400px] w-[800px] ml-1  ">
-<div className="flex  mt-3 ml-8 ">
+            
+            <div className="mt-5 border-2 h-44 w-44 ml-5">
+                <Image src={img} className="ml-2 -mt-3 h-44 w-44" alt="logo" />
+            </div>
 
-<div className=" mt-5   border-2 h-44 w-44   ">
-<Image src={img} className=" ml-2 -mt-2 h-44 w-44  -mb-2    " alt="logo"/>
-</div>
+            
+            <div className="text-container ml-8 mt-14" style={{ width: 'calc(100% - 14rem)' }}>
+                {/* Nom */}
+                {description[2] && (
+                    <div >
+                        <h1 className="text-2xl font-bold uppercase" style={{ marginTop: '10rem' ,marginLeft : '-12rem' }}>
+                        {description[2].name}
+                        </h1>
+                        {/* Travail */}
+                        <h2 className="text-2xl font-mono uppercase" style={{ marginTop: '10px' ,marginLeft : '-12rem' }}>
+                        {description[2].job}
+                        </h2>
+                    </div>
+                )}
 
-<div className=" mt-3 bg-meduimwhite ">
-</div>
-<div className="-ml-44 mt-10"><h1 className="text-2xl  mt-40 font-bold  uppercase">Nom complete</h1>
-</div>
-<div className="-ml-44 mt-10">
-<h2 className="text-2xl  mt-48 -ml-6 font-mono  uppercase">metier</h2>
-</div>
+             
+                <h1 className="text-4xl ml-2 -mt-64 font-font-Allison font-extrabold">“</h1>
+                {description[2] && (
 
-<h1 className="text-4xl ml-28 mt-3 font-font-Allison  font-extrabold">“</h1>
-<p className="font-outfitregular  mt-12">ded by desire, that they cannot foresee <br/> the pain and trouble that are bound to <br/> ensue;
-and equal blame belongs to those <br/> who fail in their duty through weakness of<br/> will, which is</p>
-</div>
+<p className="font-outfitregular  " >
+{description[0].description}
+</p>
+    )
+  
+  }
+            </div>
+        </div>
+    </div>
 
-</div>
-<div className="bg-meduimwhite border h-[400px] w-[850px] mr-4  ">
-<div className="flex  mt-3 ml-8 ">
-
-<div className=" mt-5   border-2 h-44 w-44   ">
-<Image src={img} className=" ml-2 -mt-2 h-44 w-44  -mb-2    " alt="logo"/>
-</div>
-
-<div className=" mt-3 bg-meduimwhite  ">
-</div>
-<div className="-ml-44 mt-10"><h1 className="text-2xl  mt-40 font-bold  uppercase">Nom  complete</h1>
-</div>
-<div className="-ml-44 mt-10">
-<h2 className="text-2xl  mt-48 -ml-6 font-outfit  uppercase">metier</h2>
-</div>
-
-<h1 className="text-4xl ml-28 mt-3 font-outfit font-extrabold">“</h1>
-<p className="font-outfitregular mt-12">ded by desire, that they cannot foresee <br/> the pain and trouble that are bound to <br/> ensue;
-and equal blame belongs to those <br/> who fail in their duty through weakness of<br/> will, which is</p>
-</div>
-
-</div>
+    <div id="ez2" className="bg-mediumwhite border h-[400px] w-[600px] mr-4">
+    <div className="flex mt-3 ml-8">
 
 
+    <div className="mt-5 border-2 h-44 w-44 -ml-1">
+                <Image src={img} className="ml-2 -mt-3 h-44 w-44" alt="logo" />
+            </div>
 
+
+<div className="text-container ml-8 mt-14" style={{ width: 'calc(100% - 14rem)' }}>
+    
+    {description[3] && (
+                    <div >
+                        <h1 className="text-2xl font-bold uppercase" style={{ marginTop: '10rem' ,marginLeft : '-12rem' }}>
+                        {description[3].name}
+                        </h1>
+                        {/* Travail */}
+                        <h2 className="text-2xl font-mono uppercase" style={{ marginTop: '10px' ,marginLeft : '-12rem' }}>
+                        {description[3].job}
+                        </h2>
+                    </div>
+                )}
+
+ 
+    <h1 className="text-4xl ml-2 -mt-64 font-font-Allison font-extrabold">“</h1>
+    {description[3] && (
+
+<p className="font-outfitregular  " >
+{description[3].description}
+</p>
+    )
+  
+  }
+   
 </div>
+</div>
+    </div>
+</div>
+
 </SwiperSlide>
 
 </Swiper></div></div>
