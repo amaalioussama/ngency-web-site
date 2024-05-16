@@ -2,7 +2,7 @@ import style from "@/styles/Home/Services/style.css";
 import Marquee from "react-fast-marquee";
 export default function ServiceComponent() {
   return (
-    <div className="">
+    <div className=" mt-5">
       <div className="border-4 border-l-4 border-t-0 border-b-0 -mr-1  ">
         <div className=" rotate-3">
           <Marquee className="border-2 border-black bg-mediumpink w-full h-[60px] px-[15rem]" gradient={false} speed={150} pauseOnHover={true}>

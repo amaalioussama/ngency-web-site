@@ -47,7 +47,7 @@ useEffect(() => {
     id="aaalll"
     className="flex border-4 border-l-0 border-r-0 bg-grayup h-screen overflow-hidden">
   
-      <div      id="tt2"  className="border-4 border-l-4 border-t-0 border-b-0 -mr-1 w-[87px]">
+      <div      id="tt2"  className="border-4  border-t-0 border-b-0 -mr-1 w-[87px]">
         <div id="hqd" className="absolute mt-[200px] ml-5 w-13">
           <h1
             className="text-white text-3xl font-outfitblack "
@@ -92,7 +92,8 @@ useEffect(() => {
         </div>
         {description[0] && (
     
-      <h1 className=" absolute text-center  ml-36 mt-10 text-black  text-xl font-bold  uppercase"> {description[0].name}</h1>
+      <h1 className=" absolute text-center  ml-36 mt-10 text-black  text-xl font-bold  uppercase"> <a className="textb" href="cavaille-avocat.com
+      "></a> {description[0].name}</h1>
     )}
       {description[0] && (
       
@@ -102,7 +103,7 @@ useEffect(() => {
       <h2 className=" absolute mt-24 ml-32 text-darkpink">__________________________________________________________________________</h2>
       <Image src={starts} className="absolute mt-20 right-12 h-7 w-28" alt='ll'/>
       {description[0] && (
-      <p className=" absolute mt-32 ml-[120px] text-xs font-outfitregular text-black uppercase"> {description[0].description}</p>
+      <p className=" absolute mt-32 ml-[106px] text-xs font-outfitregular text-black uppercase"> {description[0].description}</p>
            )}
       </div>
        </div>
@@ -158,14 +159,14 @@ useEffect(() => {
       <div className="absolute swiper-pagination -mt-40">
         
         </div>
-      <div className=" absolute  mt-[550px] ml-[569px] border-2  border-darkpink bg-white h-11 w-64">
+      <div id='grg' className=" absolute  mt-[550px] ml-[560px] border-2  border-darkpink bg-white h-11 w-64">
      
       <motion.button
         whileHover={{
           scale: 1.1,
           backgroundColor: "#cc3399"
         }}
-        transition={{ duration: 0.5}} className=" flex justify-center items-center ml-1 -mt-2    bg-darkpink w-64 h-11">
+        transition={{ duration: 0.5}}  className=" flex justify-center items-center ml-1 -mt-2    bg-darkpink w-64 h-11">
      <div className="flex"> 
      <h2 className="text-white font-outfitregular text-sm uppercase">Parlez nous de votre projet </h2> 
      <Image src={vertor} alt="img" className=" ml-2 mt-1 h-4 w-4" />

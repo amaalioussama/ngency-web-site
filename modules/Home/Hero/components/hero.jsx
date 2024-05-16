@@ -127,7 +127,7 @@ Home
 </div>
 {/* right section */}
 
-    <div id="rr" className="border-4 border-r-0 border-b-0 mr-[86px] -mt-20">
+    <div id="rr" className="border-4 border-r-0 border-b-0 mr-[86px] ">
         <div id="logos"className="  flex flex-col items-start">
 
         <a id="rre"href="https://www.facebook.com" className="block -mt-1">
@@ -138,13 +138,7 @@ Home
             <Image src={insta} className="absolute ml-6 mt-56 w-7" alt="logo"/>
         </a>
     
-        <a id="rre"href="https://www.twitter.com" className="block mt-[80px]">
-            <Image src={twiter} className="absolute ml-6 mt-56 w-7"alt="logo" />
-        </a>
-    
-        <a id="rre"href="https://www.pinterest.com" className="block mt-[80px]">
-            <Image src={Pintrest} className="absolute ml-6 mt-56 w-7" alt="logo" />
-        </a>
+     
         </div>
     
     </div>

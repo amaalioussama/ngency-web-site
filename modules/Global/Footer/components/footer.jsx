@@ -30,9 +30,7 @@ export default function FooterSection() {
             <Link href="#" className="text-black hover:font-bold">
               Contact
             </Link>
-            <Link href="#" className="text-black hover:font-bold">
-              Carrières
-            </Link>
+        
           </div>
           <div className="flex items-center gap-4 pr-3">
             <a href="https://facebook.com/">
@@ -41,12 +39,7 @@ export default function FooterSection() {
             <a href="https://www.instagram.com/">
               <img className="w-6" src="/images/Insta.png" alt="instagram" />
             </a>
-            <a href="https://twitter.com/">
-              <img className="w-6" src="/images/Twiter.png" alt="twiter" />
-            </a>
-            <a href="https://www.pinterest.com/">
-              <img className="w-6" src="/images/Pintrest.png" alt="pintrest" />
-            </a>
+           
           </div>
         </div>
         <div className="flex justify-center w-20 h-20 bg-[#2E2E2E] p-6">

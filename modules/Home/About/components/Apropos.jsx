@@ -38,8 +38,8 @@ useEffect(() => {
   fetchData();
 }, []);
   const initialValues = {
-    h1: 'Innovation',
-    h2: 'Collaboration',
+    h1: 'Collaboration',
+    h2: 'Innovation',
     h3: 'Qualité',
     h4: 'Satisfaction client',
     h5: 'Intégrité',
@@ -93,7 +93,7 @@ useEffect(() => {
 
   const handleClick1 = () => {
     setH1Content(
-    "NGENCY s'engage à être constamment à la pointe de l'innovation, en recherchant de nouvelles idées et technologies pour offrir des solutions digitales créatives et avant-gardistes à ses clients."
+    "Nous cultivons la collaboration pour fusionner diverses expertises, créant ainsi des solutions digitales uniques et puissantes."
     );
     setH1Style({
       fontSize: '10px',
@@ -108,8 +108,7 @@ useEffect(() => {
 
   const handleClick2 = () => {
     setH2Content(
-    "NGENCY s'engage à être constamment à la pointe de l'innovation, en recherchant de nouvelles idées et technologies pour offrir des solutions digitales créatives et avant-gardistes à ses clients."
-    );
+ "Chez Ngency, nous repoussons les limites du digital en intégrant les dernières innovations pour transformer des idées en solutions créatives et efficaces."  );
     setH2Style({
       fontSize: '10px',
       color: 'white',
@@ -123,8 +122,7 @@ useEffect(() => {
 
   const handleClick3 = () => {
     setH3Content(
-    "NGENCY s'engage à être constamment à la pointe de l'innovation, en recherchant de nouvelles idées et technologies pour offrir des solutions digitales créatives et avant-gardistes à ses clients."
-    );
+   "Nous visons l'excellence, assurant la qualité suprême de chaque projet pour surpasser les attentes de nos clients." );
     setH3Style({
       fontSize: '10px',
       color: 'black',
@@ -138,7 +136,7 @@ useEffect(() => {
 
   const handleClick4 = () => {
     setH4Content(
-    "NGENCY s'engage à être constamment à la pointe de l'innovation, en recherchant de nouvelles idées et technologies pour offrir des solutions digitales créatives et avant-gardistes à ses clients."
+  "Votre satisfaction est notre priorité. Nous nous adaptons à vos besoins pour offrir des expériences utilisateurs exceptionnelles"
     );
     setH4Style({
       fontSize: '10px',
@@ -152,7 +150,7 @@ useEffect(() => {
 
   const handleClick5 = () => {
     setH5Content(
-    "NGENCY s'engage à être constamment à la pointe de l'innovation, en recherchant de nouvelles idées et technologies pour offrir des solutions digitales créatives et avant-gardistes à ses clients."
+   "Nous adhérons à une éthique stricte, garantissant transparence et honnêteté dans chaque interaction."
     );
     setH5Style({
       fontSize: '10px',
@@ -166,7 +164,7 @@ useEffect(() => {
 
   const handleClick6 = () => {
     setH6Content(
-    "NGENCY s'engage à être constamment à la pointe de l'innovation, en recherchant de nouvelles idées et technologies pour offrir des solutions digitales créatives et avant-gardistes à ses clients."
+   "Le respect est au cœur de notre approche, valorisant chaque individu et chaque idée pour  enrichir notre travail."
     );
     setH6Style({
       fontSize: '10px',
@@ -183,23 +181,23 @@ useEffect(() => {
   ]
   const wordsligne2 = [
 
-    " créer des " 
+    " Notre créativité et " 
   ]
   const wordsligne3 = [
 
-    "expériences digitales exceptionnelles. Leur créativité et leur engagement ont" 
+    "  notre engagement chez Ngency ont séduit de nombreux clients,nous propulsant au" 
   ]
   const wordsligne4 = [
 
-    "séduit de nombreux clients, propulsant NGENCY au sommet du monde digital." 
+    "   sommet du monde digital. Aujourd'hui,nous continuons d'inspirer avec notre énergie" 
   ]
   const wordsligne5 = [
 
-    "Aujourd'hui, ils continuent d'inspirer avec leur énergie contagieuse et leur"  
+    " contagieuse et notre approche innovante. Chaque projet est une chance de pousser"  
   ]
   const wordsligne6 = [
 
-    "approche innovante."  
+    "  les limites du possible et de redéfinir l'excellence dans le secteur digital."  
   ]
 
   const handleMouseEnter = (functionNumber) => {
@@ -302,7 +300,7 @@ animate={{ opacity: 1 , y : 40 }}
 transition={{duration: 1 }}
 whileInView={{ y: -6, opacity: 1 }}
 className="mt-20 ml-14">
-  <div  className=" whitespace-nowrap    " >
+  <div  className=" whitespace-nowrap    " id="pg" >
     <div className="flex">
 
    
@@ -337,7 +335,7 @@ className="mt-20 ml-14">
   </div>
   </motion.div>
 
-  <div   className="mt-12   border-4 border-l-0 border-b-0 border-r-0">
+  <div  id="mla" className="mt-12   border-4 border-l-0 border-b-0 border-r-0">
     <div className="flex justify-center items-center mt-5 mr-10">
 
     <h1 id="stroook" className="text-black text-4xl font-sans  uppercase ml-8">Notre équipe</h1>
@@ -365,6 +363,7 @@ slidesPerView={1}
 loop={true}
 onSlideChange={() => console.log('slide change')}
 onSwiper={(swiper) => console.log(swiper)}
+id="za"
 className="w-[1188px] -mr-3 "
 
 >
@@ -486,43 +485,7 @@ className="w-[1188px] -mr-3 "
         </div>
     </div>
 
-    <div id="ez2" className="bg-mediumwhite border h-[400px] w-[600px] mr-4">
-    <div className="flex mt-3 ml-8">
 
-
-    <div className="mt-5 border-2 h-44 w-44 -ml-1">
-                <Image src={img} className="ml-2 -mt-3 h-44 w-44" alt="logo" />
-            </div>
-
-
-<div className="text-container ml-8 mt-14" style={{ width: 'calc(100% - 14rem)' }}>
-    
-    {description[3] && (
-                    <div >
-                        <h1 className="text-2xl font-bold uppercase" style={{ marginTop: '10rem' ,marginLeft : '-12rem' }}>
-                        {description[3].name}
-                        </h1>
-                        {/* Travail */}
-                        <h2 className="text-2xl font-mono uppercase" style={{ marginTop: '10px' ,marginLeft : '-12rem' }}>
-                        {description[3].job}
-                        </h2>
-                    </div>
-                )}
-
- 
-    <h1 className="text-4xl ml-2 -mt-64 font-font-Allison font-extrabold">“</h1>
-    {description[3] && (
-
-<p className="font-outfitregular  " >
-{description[3].description}
-</p>
-    )
-  
-  }
-   
-</div>
-</div>
-    </div>
 </div>
 
 </SwiperSlide>
@@ -544,7 +507,7 @@ className="mt-20 "><div  id="is" className="mt-8  border-4 border-l-0 border-b-0
    
 
     </div>
-    <div className="flex mt-6">
+    <div  id="squad" className="flex mt-6">
     <div className="border-2 border-l-1 border-b-0 h-28 w-[390px] "
      onMouseOver={() => handleMouseEnter(1)} 
      onMouseLeave={handleMouseLeave}>
@@ -570,7 +533,7 @@ className="mt-20 "><div  id="is" className="mt-8  border-4 border-l-0 border-b-0
           </div>
 
 
-          <div className="flex ">
+          <div id="squad" className="flex ">
             <div className="border-4 border-l-1 h-28   w-[390px] bg-mediumBlue"
               onMouseOver={() => handleMouseEnter(4)} 
               onMouseLeave={handleMouseLeave}>

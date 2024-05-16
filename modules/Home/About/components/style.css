@@ -23,3 +23,39 @@
     width: 1126px;
   }
    }
+   @media screen and (min-width: 1600px) {
+    #ll2{
+     
+      width:25.8rem;
+     
+    }
+    #rr2{
+      margin-left: 3.5rem;
+    }
+    #c{
+      margin-left: 9rem;
+      
+    }
+    #mla{
+      width: 83rem;
+      margin-left: -9rem;
+    }
+    #ez{
+       margin-left: 4rem;
+
+    }
+    #za{
+      margin-left: -4rem;
+    }
+    #is{
+      width:83rem;
+      margin-left: -9rem;
+    }
+    #squad{
+
+    margin-left: 5rem;
+    }
+    #pg{
+      margin-left: -4rem;
+    }
+     }

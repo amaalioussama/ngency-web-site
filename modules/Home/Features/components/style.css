@@ -6,3 +6,11 @@
         margin-left: 5rem;
     }
 }
+@media screen and (min-width: 1600px) {
+    #tt{
+        margin-left: 12rem;
+    }
+    #tt1{
+        margin-left: 12rem;
+    }
+}

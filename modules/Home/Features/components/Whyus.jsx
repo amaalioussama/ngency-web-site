@@ -10,7 +10,7 @@ const Whyus = () => {
         animate={{ opacity: 1 , y : 40 }}
         transition={{duration: 1 }}
         
-        whileInView={{ y: -40, opacity: 1 }} className="relative bg-grayup mt-5 h-[580px]">
+        whileInView={{ y: -5, opacity: 1 }} className="relative bg-grayup mt-5 h-[400px]">
             <div      id="tt1" className="">
             <h1 className=" absolute ml-96 mt-9 flex justify-center items-center text-white text-4xl uppercase font-bold"> Pourquoi notre agence ?</h1>
           
@@ -34,10 +34,16 @@ const Whyus = () => {
 
                         <div className="absolute bg-mediumBlue  h-[150px] w-[355px]">
                             <div className=" absolute border-4 bg-darkpink flex h-36 w-[350px] ">
-                                <h1 className="ml-2 text-white text-4xl font-bold uppercase flex items-center justify-center">
-                                    + X             </h1>
-                                <span className="text-white text-xl font-bold uppercase ml-4 flex items-center justify-center">
-                                    années d'expérience <br /> dans l'industrie.
+                                    {/* <h1 className="ml-2 text-white text-4xl font-bold uppercase flex items-center justify-center">
+                                        + X             </h1> */}
+                                <span className="text-white text-sm font-bold uppercase ml-4 flex items-center justify-center">
+                                    
+                                    Expertise Polyvalente : Notre équipe multidisciplinaire possède  une expertise <br /> approfondie
+dans tous les aspects  <br /> du développement web et du marketing digital.
+
+                                    
+                                    
+                                    
                                 </span>
                             </div>
 
@@ -52,11 +58,13 @@ const Whyus = () => {
           
         }}
         transition={{ duration: 0.5}}className=" absolute border-4 bg-white flex h-36 w-[350px] ml-[450px]">
-                    <h1 className="ml-2 text-black text-5xl font-bold uppercase flex items-center justify-center">
+                    {/* <h1 className="ml-2 text-black text-5xl font-bold uppercase flex items-center justify-center">
                         + X
-                    </h1>
-                    <span className="text-black text-xl font-bold uppercase ml-4 flex items-center justify-center">
-                        années d'expérience <br /> dans l'industrie.
+                    </h1> */}
+                    <span className="text-black text-sm font-bold uppercase ml-4 flex items-center justify-center">
+                    Approche Collaborative : Nous croyons au pouvoir de la collaboration. Nous travaillons en
+étroite collaboration avec nos clients pour comprendre leurs besoins uniques et leur fournir
+des solutions personnalisées qui répondent à leurs attentes
                     </span>
                 </motion.div>
 
@@ -65,15 +73,18 @@ const Whyus = () => {
           
         }}
         transition={{ duration: 0.5}} className=" absolute border-4 bg-white flex h-36 w-[350px] ml-[860px] ">
-                    <h1 className="ml-2 text-black text-5xl font-bold uppercase flex items-center justify-center">
+                    {/* <h1 className="ml-2 text-black text-5xl font-bold uppercase flex items-center justify-center">
                         X %
-                    </h1>
-                    <span className="text-black text-xl font-bold uppercase ml-4 flex items-center justify-center">
-                        années d'expérience <br /> dans l'industrie.
+                    </h1> */}
+                    <span className="text-black text-sm font-bold uppercase ml-4 flex items-center justify-center">
+                    Qualité et Excellence : Nous sommes passionnés par notre travail et nous nous engageons
+à fournir des services de la plus haute qualité, axés sur l'innovation, la créativité et
+l'excellence.
+
                     </span>
                 </motion.div>
             </motion.div>
-          <motion.div
+          {/* <motion.div
         initial={{ opacity: 0 , y : -300}}
         animate={{ opacity: 1 , y : 40 }}
         transition={{duration: 1 }}
@@ -129,7 +140,7 @@ const Whyus = () => {
                     </div>
                   
                 </motion.div>
-            </motion.div>
+            </motion.div> */}
         </motion.div>
     );
 };

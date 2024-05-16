@@ -1,3 +1,5 @@
+'use client'
+
 import dynamic from "next/dynamic";
 
 // Modules
@@ -27,16 +29,34 @@ const Hero = dynamic(() => import("@/modules/Home/Hero"), {
   });
 
 export default function Home() {
+  
+
   return (
     <main>
-      <Hero />
-      <About />
-      <Features />
-      <Services />
-      <Portfolio />
-      <Blogs />
-      <Testimonials />
-      <Contact />
+      <div className="overflow-hidden">
+        <Hero />
+      </div>
+      <div className="overflow-hidden">
+        <About />
+      </div>
+      <div className="overflow-hidden">
+        <Features />
+      </div>
+      <div className="overflow-hidden">
+        <Services />
+      </div>
+      <div className="overflow-hidden">
+        <Portfolio />
+      </div>
+      <div className="overflow-hidden">
+        <Blogs />
+      </div>
+      <div className="overflow-hidden">
+        <Testimonials />
+      </div>
+      <div  className="overflow-hidden">
+        <Contact />
+      </div>
     </main>
   );
 }

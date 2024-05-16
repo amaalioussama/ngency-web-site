@@ -73,7 +73,7 @@ export default function ContactComponent() {
               <input
                 className="bg-[#F3F3F3] w-96 h-12 -translate-x-[3px] -translate-y-[3px] pl-4"
                 type="text"
-                placeholder="NOM COMPLÈTE"
+                placeholder="NOM COMPLET"
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleChange}
